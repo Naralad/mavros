@@ -1,5 +1,6 @@
 std_msgs/Header header
 float32 gain_scale
+float32 mass
 
 bool fuse_p
 bool fuse_v

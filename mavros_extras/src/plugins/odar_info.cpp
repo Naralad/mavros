@@ -47,6 +47,7 @@ void handle_odar_info(const mavlink_message_t *msg, uint8_t sysid, uint8_t compi
 	ros_msg->header.stamp = ros::Time(sec, ns);
 
 	ros_msg->gain_scale = odar_info.gain_scale; 
+	ros_msg->mass = odar_info.mass;
 	ros_msg->fuse_p = odar_info.fuse_flag & (1 << 0);
 	ros_msg->fuse_v = odar_info.fuse_flag & (1 << 1);
 	ros_msg->fuse_q = odar_info.fuse_flag & (1 << 2);
